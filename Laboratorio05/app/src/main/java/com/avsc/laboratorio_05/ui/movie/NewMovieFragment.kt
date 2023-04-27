@@ -1,26 +1,31 @@
-package com.avsc.laboratorio_05
+package com.avsc.laboratorio_05.ui.movie
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import com.avsc.laboratorio_05.R
+import com.avsc.laboratorio_05.data.model.MovieModel
+import com.avsc.laboratorio_05.repositories.MovieRepository
 
 /**
  * A simple [Fragment] subclass.
  * Use the [newMovieFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
 class newMovieFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    private lateinit var btnSubmit : Button
+    private lateinit var btnSubmit: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,16 +43,18 @@ class newMovieFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind()
-       // listeners()
+        listeners()
     }
 
-    private fun bind(){
+    private fun bind() {
         btnSubmit = view?.findViewById(R.id.btn_submit) as Button
     }
 
-    //private fun listeners(){
-       // btnSubmit.setOnClickListener{
-         //   it.findNavController().navigate(R.id.action_add_Movie_Fragment_to_billBoard_Fragment)
-       // }
-    //}
+    private fun listeners() {
+
+        btnSubmit.setOnClickListener {
+            it.findNavController().navigate(R.id.action_newMovieFragment_to_billboardFragment)
+            //Log.d("App TAG", viewmodel.getMovies().toString)
+        }
+    }
 }

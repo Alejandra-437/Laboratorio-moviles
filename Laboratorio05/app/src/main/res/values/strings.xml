@@ -13,5 +13,6 @@
     <string name="hint_description">Description</string>
     <string name="hint_calification">Calification</string>
     <string name="submit">submit</string>
+    <string name="share_text">Name: %1$s \nCategory: %2$s \nDescription: %3$s\nCalification: %4$s</string>
     <string name="star_wars_description">Tras tres años de Guerras Clon, los jedi rescatan a Palpatine del Conde Dooku. Mientras Obi-Wan persigue una nueva amenaza, Anakin actúa como agente doble entre el Consejo Jedi y Palpatine, siendo atraído por un siniestro plan.</string>
 </resources>
