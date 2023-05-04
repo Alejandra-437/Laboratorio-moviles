@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/newMovieFragment"
-        android:name="com.avsc.laboratorio_05.ui.movie.newMovieFragment"
+        android:name="com.avsc.laboratorio_05.ui.movie.NewMovieFragment"
         android:label="fragment_new_movie"
         tools:layout="@layout/fragment_new_movie" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/movieFragment"
-        android:name="com.avsc.laboratorio_05.ui.movie.movieFragment"
+        android:name="com.avsc.laboratorio_05.ui.movie.MovieFragment"
         android:label="fragment_movie"
         tools:layout="@layout/fragment_movie" />
 </navigation>

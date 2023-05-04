@@ -8,6 +8,8 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.avsc.laboratorio_05.R
+import com.avsc.laboratorio_05.databinding.FragmentBillboardBinding
+import com.avsc.laboratorio_05.databinding.FragmentNewMovieBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -20,13 +22,15 @@ class billboardFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private lateinit var buttonFragmentNewMovie: FloatingActionButton
     private lateinit var cardViewFragmentStarWars: CardView
+    private lateinit var binding :FragmentBillboardBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_billboard, container, false)
+        binding = FragmentBillboardBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

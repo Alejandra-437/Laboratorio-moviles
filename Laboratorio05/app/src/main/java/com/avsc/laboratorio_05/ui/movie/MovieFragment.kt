@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.avsc.laboratorio_05.R
+import com.avsc.laboratorio_05.databinding.FragmentMovieBinding
+import com.avsc.laboratorio_05.databinding.FragmentNewMovieBinding
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 /**
@@ -13,10 +16,12 @@ private const val ARG_PARAM2 = "param2"
  * Use the [movieFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class movieFragment : Fragment() {
+class MovieFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var binding : FragmentMovieBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +36,8 @@ class movieFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_movie, container, false)
+        binding = FragmentMovieBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     companion object {
@@ -46,7 +52,7 @@ class movieFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            movieFragment().apply {
+            MovieFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
