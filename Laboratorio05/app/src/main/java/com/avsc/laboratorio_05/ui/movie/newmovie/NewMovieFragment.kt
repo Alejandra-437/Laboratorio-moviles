@@ -1,4 +1,4 @@
-package com.avsc.laboratorio_05.ui.movie
+package com.avsc.laboratorio_05.ui.movie.newmovie
 
 import android.os.Bundle
 import android.util.Log
@@ -10,17 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.avsc.laboratorio_05.databinding.FragmentNewMovieBinding
+import com.avsc.laboratorio_05.ui.movie.MovieViewModel
 
-
-/**
- * A simple [Fragment] subclass.
- * Use the [newMovieFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 class NewMovieFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private lateinit var btnSubmit: Button
@@ -33,7 +24,7 @@ class NewMovieFragment : Fragment() {
         MovieViewModel.Factory
     }
 
-    private lateinit var binding :FragmentNewMovieBinding
+    private lateinit var binding : FragmentNewMovieBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
